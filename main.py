@@ -1,6 +1,8 @@
 from collect_data import DataCollector
 from analyze_data import DataAnalyzer
 from visualize_data import DataVisualizer
+import logging
+
 
 if __name__ == '__main__':
     # Step 1: Collect Data
@@ -9,7 +11,7 @@ if __name__ == '__main__':
     try:
         collected_data = data_collector.fetch_data()
     except Exception as e:
-        print(f'Error collecting data: {e}')
+        logging.error(f'Error collecting data: {e}')
         exit(1)
 
     # Step 2: Analyze Data
