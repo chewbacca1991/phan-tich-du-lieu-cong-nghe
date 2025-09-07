@@ -3,15 +3,15 @@ from analyze_data import DataAnalyzer
 from visualize_data import DataVisualizer
 
 if __name__ == '__main__':
-    # Bước 1: Thu thập dữ liệu
+    # Step 1: Collect Data
     urls = ['http://example.com/news1', 'http://example.com/news2']
-    collector = DataCollector(urls)
-    data = collector.fetch_data()
+    data_collector = DataCollector(urls)
+    collected_data = data_collector.fetch_data()
 
-    # Bước 2: Phân tích dữ liệu
-    analyzer = DataAnalyzer(data)
-    labels = analyzer.analyze()
+    # Step 2: Analyze Data
+    data_analyzer = DataAnalyzer(collected_data)
+    labels = data_analyzer.analyze()
 
-    # Bước 3: Trực quan hóa dữ liệu
-    visualizer = DataVisualizer(labels)
-    visualizer.plot()
+    # Step 3: Visualize Data
+    data_visualizer = DataVisualizer(labels)
+    data_visualizer.plot()
