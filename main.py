@@ -6,7 +6,11 @@ if __name__ == '__main__':
     # Step 1: Collect Data
     urls = ['http://example.com/news1', 'http://example.com/news2']
     data_collector = DataCollector(urls)
-    collected_data = data_collector.fetch_data()
+    try:
+        collected_data = data_collector.fetch_data()
+    except Exception as e:
+        print(f'Error collecting data: {e}')
+        exit(1)
 
     # Step 2: Analyze Data
     data_analyzer = DataAnalyzer(collected_data)
