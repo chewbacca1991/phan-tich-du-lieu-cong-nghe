@@ -9,9 +9,9 @@ class DataVisualizer:
         x = np.arange(len(self.data))
         plt.bar(x, self.data)
         plt.xticks(x, [f'Item {i}' for i in range(len(self.data))])
-        plt.xlabel('Dữ liệu')
-        plt.ylabel('Giá trị')
-        plt.title('Biểu đồ dữ liệu công nghệ')
+        plt.xlabel('Data')
+        plt.ylabel('Value')
+        plt.title('Technology Data Chart')
         plt.show()
 
 if __name__ == '__main__':
