@@ -24,4 +24,8 @@ if __name__ == '__main__':
 
     # Step 3: Visualize Data
     data_visualizer = DataVisualizer(labels)
-    data_visualizer.plot()
+    try:
+        data_visualizer.plot()
+    except Exception as e:
+        logging.error(f'Error visualizing data: {e}')
+        exit(1)
