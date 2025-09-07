@@ -18,7 +18,7 @@ class DataCollector:
         return data
 
 if __name__ == '__main__':
-    urls = ['http://example.com/news1', 'http://example.com/news2']
+    urls = ['https://example.com/news1', 'https://example.com/news2']  # Changed to HTTPS
     collector = DataCollector(urls)
     data = collector.fetch_data()
     print(data)
