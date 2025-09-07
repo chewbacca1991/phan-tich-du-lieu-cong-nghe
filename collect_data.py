@@ -7,11 +7,14 @@ class DataCollector:
     def fetch_data(self):
         data = []
         for url in self.source_urls:
-            response = requests.get(url)
-            if response.status_code == 200:
-                data.append(response.json())
-            else:
-                print(f'Failed to retrieve data from {url}')
+            try:
+                response = requests.get(url, timeout=10)  # Added timeout
+                if response.status_code == 200:
+                    data.append(response.json())
+                else:
+                    print(f'Failed to retrieve data from {url}')
+            except requests.exceptions.RequestException as e:
+                print(f'Error occurred: {e}')  # Handle exceptions
         return data
 
 if __name__ == '__main__':
