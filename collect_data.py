@@ -12,9 +12,9 @@ class DataCollector:
                 if response.status_code == 200:
                     data.append(response.json())
                 else:
-                    print(f'Failed to retrieve data from {url}')
+                    print(f'Failed to retrieve data from {url}, status code: {response.status_code}')
             except requests.exceptions.RequestException as e:
-                print(f'Error occurred: {e}')  # Handle exceptions
+                print(f'Error occurred while fetching {url}: {e}')  # Handle exceptions
         return data
 
 if __name__ == '__main__':
