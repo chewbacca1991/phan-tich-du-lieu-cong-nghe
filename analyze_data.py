@@ -9,7 +9,7 @@ class DataAnalyzer:
     def analyze(self):
         vectorizer = CountVectorizer()
         X = vectorizer.fit_transform(self.data)
-        kmeans = KMeans(n_clusters=3)
+        kmeans = KMeans(n_clusters=3, n_init=10)
         kmeans.fit(X)
         return kmeans.labels_
 
