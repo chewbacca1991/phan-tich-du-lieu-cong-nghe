@@ -9,8 +9,8 @@ class DataVisualizer:
         indices = np.arange(len(self.data))
         plt.bar(indices, self.data)
         plt.xticks(indices, [f'Item {i + 1}' for i in range(len(self.data))])  # Changed to start from 1
-        plt.xlabel('Items')  # Updated xlabel for clarity
-        plt.ylabel('Value')
+        plt.xlabel('Data Points')  # Changed xlabel for clarity
+        plt.ylabel('Values')  # Changed ylabel for clarity
         plt.title('Data Visualization of Technology Metrics')  # Updated title for clarity
         plt.show()
 
