@@ -11,7 +11,7 @@ class DataVisualizer:
         plt.xticks(x, [f'Item {i + 1}' for i in range(len(self.data))])  # Changed to start from 1
         plt.xlabel('Items')  # Updated xlabel for clarity
         plt.ylabel('Value')
-        plt.title('Technology Data Chart')
+        plt.title('Data Visualization of Technology Metrics')  # Updated title for clarity
         plt.show()
 
 if __name__ == '__main__':
