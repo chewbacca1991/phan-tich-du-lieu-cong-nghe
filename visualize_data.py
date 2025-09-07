@@ -9,7 +9,7 @@ class DataVisualizer:
         x = np.arange(len(self.data))
         plt.bar(x, self.data)
         plt.xticks(x, [f'Item {i + 1}' for i in range(len(self.data))])  # Changed to start from 1
-        plt.xlabel('Data')
+        plt.xlabel('Items')  # Updated xlabel for clarity
         plt.ylabel('Value')
         plt.title('Technology Data Chart')
         plt.show()
