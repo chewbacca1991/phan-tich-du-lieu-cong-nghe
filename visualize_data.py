@@ -6,9 +6,9 @@ class DataVisualizer:
         self.data = data
 
     def plot(self):
-        x = np.arange(len(self.data))
-        plt.bar(x, self.data)
-        plt.xticks(x, [f'Item {i + 1}' for i in range(len(self.data))])  # Changed to start from 1
+        indices = np.arange(len(self.data))
+        plt.bar(indices, self.data)
+        plt.xticks(indices, [f'Item {i + 1}' for i in range(len(self.data))])  # Changed to start from 1
         plt.xlabel('Items')  # Updated xlabel for clarity
         plt.ylabel('Value')
         plt.title('Data Visualization of Technology Metrics')  # Updated title for clarity
