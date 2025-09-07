@@ -16,7 +16,11 @@ if __name__ == '__main__':
 
     # Step 2: Analyze Data
     data_analyzer = DataAnalyzer(collected_data)
-    labels = data_analyzer.analyze()
+    try:
+        labels = data_analyzer.analyze()
+    except Exception as e:
+        logging.error(f'Error analyzing data: {e}')
+        exit(1)
 
     # Step 3: Visualize Data
     data_visualizer = DataVisualizer(labels)
